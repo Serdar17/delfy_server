@@ -8,7 +8,7 @@ const router = new Router();
 
 
 router.post('/registration', [
-    check('username', 'Имя пользователя не может быть пустым').notEmpty(),
+    check('username', 'Имя пользователя не может быть').notEmpty(),
     check('email', 'Неверный формат почты').isEmail(),
     check('password', 'Пароль должен быть минимум из 6 символов').isLength({ min: 6})
 ], controller.registration);
